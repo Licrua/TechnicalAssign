@@ -78,22 +78,22 @@
     transition: background-color 0.3s;
   }
   .card--popcorn.center {
-    transform: translateX(0); /* Центрируем карточку попкорна */
+    transform: translateX(30%); /* Центрируем карточку попкорна */
     opacity: 1;
     z-index: 2;
   }
   .card--popcorn.offset {
-    transform: translateX(-59%); /* Смещаем карточку попкорна влево */
+    transform: translateX(-70%); /* Смещаем карточку попкорна влево */
     z-index: 1;
     opacity: 0.4;
   }
   .card--icecream.center {
-    transform: translateX(-30%); /* Центрируем карточку мороженого */
+    transform: translateX(-40%); /* Центрируем карточку мороженого */
     z-index: 2;
     opacity: 1;
   }
   .card--icecream.offset {
-    transform: translateX(50%); /* Смещаем карточку мороженого вправо */
+    transform: translateX(80%); /* Смещаем карточку мороженого вправо */
     z-index: 1;
     opacity: 0.4;
   }
@@ -140,7 +140,7 @@
   }
   .card__button {
     text-align: center;
-    width: 100%;
+    width: 100% !important;
   }
   .card--icecream .card__content, .card--popcorn .card__content {
     display: flex;
@@ -164,24 +164,44 @@
   .card--popcorn {
     order: 3;
     flex-basis: 30%;
+    height: 60vh;
+    flex-grow: 1;
   }
   .card--icecream {
     flex-basis: 30%;
     flex-grow: 1;
+    height: 60vh;
     order: 4;
-    opacity: 0.4;
   }
   .card {
     width: 80vw;
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  .card--popcorn, .card--icecream {
-    flex-basis: 45%;
-    flex-grow: 1;
+  .card-form__group:last-child {
+    gap: 0.3rem;
   }
-  .card--popcorn .card__button, .card--icecream .card__button {
-    width: unset;
+  .card-form__group:last-child label {
+    white-space: normal;
+  }
+  .card-form__group:last-child button {
+    margin-right: 0.3rem;
+  }
+  .card-form__group:last-child p {
+    margin: 0;
+  }
+}
+@media (max-width: 1180px) {
+  .card-form {
+    width: 45vw;
+  }
+}
+@media (max-width: 920px) {
+  .card-form {
+    width: 60vw;
+  }
+}
+@media (max-width: 350px) {
+  .card-form {
+    padding: 0.3rem;
   }
 }/*# sourceMappingURL=media-queries.css.map */

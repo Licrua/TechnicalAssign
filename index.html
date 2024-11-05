@@ -15,7 +15,10 @@
     <!-- Основной баннер с видео-кнопкой -->
     <section class="banner">
         <img src="./assets/icons/конфеты.jpeg" alt="Баннер" class="banner__image">
-        <button class="banner__button" onclick="openVideoPopup()">Смотреть видео</button>
+        <button class="banner__button">Смотреть видео</button>
+		<div class="banner__video">
+			<iframe width="80%"  src="https://www.youtube.com/embed/Zhq_ThHG2gA?si=cQG1-Ohu1_aWZFU1?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
     </section>
 	
 	 <main class="card__container">
@@ -79,6 +82,7 @@
     <input type="radio" name="slider" id="slide2" class="card__slider-input">
     <label for="slide2" class="card__slider-button"></label>
   </div>
+
 		<div class="card card--popcorn">
 			<div class="card__content">
 				<div class="card__badge-wrapper">
@@ -113,31 +117,42 @@
 				</div>
 			</div>
 		</div>
-
-
-    <div class="form-popup" id="formPopup">
-        <div class="form-popup__content">
-            <form class="form-popup__form">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" class="form-popup__input" required>
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" class="form-popup__input" required>
-                <button type="submit" class="form-popup__submit">Отправить</button>
-                <button type="button" class="form-popup__close" onclick="closeFormPopup()">Закрыть</button>
-            </form>
-        </div>
-    </div>
+		
+<!-- Попап -->
+			<div class="card-form-overlay">
+				<div class="card-form">
+					<button class="card-form__close">&times;</button>
+					<h2 class="card-form__title">Оставьте заявку</h2>
+					<form class="card-form__form" id="cardForm">
+						<div class="card-form__group">
+							<input type="text" class="card-form__input" id="name" name="name" placeholder="Ваше имя *" required>
+							<span class="card-form__error-message">Поле не заполнено</span>
+						</div>
+						<div class="card-form__group">
+							<input type="tel" class="card-form__input" id="phone" name="phone" placeholder="Номер телефона*" required>
+						</div>
+						<div class="card-form__group">
+							<label class="card-form__label">
+								<input type="checkbox" class="card-form__checkbox" id="consent" name="consent" required>
+								<p>
+									Я соглашаюсь на обработку персональных данных
+								</p>
+							</label>
+							<button type="submit" class="card-form__submit-button">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			
 
     <!-- Попап для видео -->
     <div class="video-popup" id="videoPopup">
         <div class="video-popup__content">
             <iframe class="video-popup__iframe" src="" allow="autoplay" allowfullscreen></iframe>
-            <button class="video-popup__close" onclick="closeVideoPopup()">Закрыть</button>
+            <button class="video-popup__close">Закрыть</button>
         </div>
     </div>
 	 </main>
-<!-- TEST -->
- 
     <script src="/script.js"></script>
 </body>
 </html>
