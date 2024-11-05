@@ -1,455 +1,143 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продуктовая страница</title>
+    <link rel="stylesheet" href="./styles.css"> <!-- Основной файл стилей -->
+    <link rel="stylesheet" href="./media-queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Основной баннер с видео-кнопкой -->
+    <section class="banner">
+        <img src="./assets/icons/конфеты.jpeg" alt="Баннер" class="banner__image">
+        <button class="banner__button" onclick="openVideoPopup()">Смотреть видео</button>
+    </section>
+	
+	 <main class="card__container">
+		<div class="card card--pea">
+			<h3 class="card__title">Горох в стручках, 1 кг</h3>
+			<div class="card__actions">
+				<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+				<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+			</div>
+			<div class="card__info">
+				<div class="card__badge-wrapper">
+					<div class="card__sale">- 29%</div>
+					<p class="card__daily">Товар дня</p>
+				</div>
+				<div class="card__details">
+					<p class="card__price">570 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+		<div class="card__column-layout">
+		<div class="card card--dove">
+			<h3 class="card__title">Голубика лесная, 200 г</h3>
+			<div class="card__actions">
+				<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+				<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+			</div>
+			<div class="card__info">
+				<div class="card__badge-wrapper">
+					<div class="card__sale">- 31%</div>
+					<p class="card__daily">Распродажа</p>
+				</div>
+				<div class="card__details">
+					<p class="card__price">140 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="card card--carrot">
+			<h3 class="card__title">Морковь мытая, 1 кг</h3>
+			<div class="card__actions">
+				<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+				<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+			</div>
+			<div class="card__info">
+				<div class="card__badge-wrapper">
+					<p class="card__daily">Хит</p>
+				</div>
+				<div class="card__details">
+					<p class="card__price">140 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+</div>	
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="card__slider">
+    <input type="radio" name="slider" id="slide1" class="card__slider-input" checked>
+    <label for="slide1" class="card__slider-button"></label>
+    <input type="radio" name="slider" id="slide2" class="card__slider-input">
+    <label for="slide2" class="card__slider-button"></label>
+  </div>
+		<div class="card card--popcorn">
+			<div class="card__content">
+				<div class="card__badge-wrapper">
+					<p class="card__daily">Товар дня</p>
+					<div class="card__sale">- 29%</div>
+				</div>
+				<div class="card__actions">
+					<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+					<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+				</div>
+			</div>
+				<div class="card__details">
+					<h4 class="card__title">Попкорн солёный,для СВЧ-печи, 120 г</h4> 
+					<p class="card__price">160 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		<div class="card card--icecream">
+			<div class="card__content">
+				<div class="card__badge-wrapper">
+					<p class="card__daily">Хит</p>
+				</div>
+				<div class="card__actions">
+					<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+					<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+				</div>
+			</div>
+				<div class="card__details">
+					<h4 class="card__title">Эскимо с малиной,150 г</h4> 
+					<p class="card__price">190 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./setting.css" />
 
-    <title>BankDash | Setting</title>
-  </head>
-
-  <body>
-    <aside>
-      <button type="button" class="close" onclick="closeSidebar()">
-        <i class="ph ph-x"></i>
-      </button>
-
-      <div class="logo">
-        <img src="./assets/icons/iconfinder_vector_65_09_473792 1.png" alt="Logo BankDash" />
-
-        <h4>BankDash.</h4>
-      </div>
-
-      <ul>
-        <li>
-          <a href="/dashboard.html">
-            <i class="ph-fill ph-house"></i>
-
-            Dashboard
-          </a>
-        </li>
-
-        <li>
-          <a href="/transactions.html">
-            <i class="ph-fill ph-hand-coins"></i>
-
-            Transactions
-          </a>
-        </li>
-
-        <li>
-          <a href="/accounts.html">
-            <i class="ph-fill ph-user"></i>
-
-            Accounts
-          </a>
-        </li>
-
-        <li>
-          <a href="/investments.html">
-            <i class="ph-fill ph-currency-eth"></i>
-
-            Investments
-          </a>
-        </li>
-
-        <li>
-          <a href="/credit-cards.html">
-            <i class="ph-fill ph-credit-card"></i>
-
-            Credit Cards
-          </a>
-        </li>
-
-        <li>
-          <a href="/loans.html">
-            <i class="ph-fill ph-coins"></i>
-
-            Loans
-          </a>
-        </li>
-
-        <li>
-          <a href="/services.html">
-            <i class="ph-fill ph-wrench"></i>
-
-            Services
-          </a>
-        </li>
-
-        <li class="active">
-          <a href="/setting.html">
-            <i class="ph-fill ph-gear"></i>
-
-            Setting
-          </a>
-        </li>
-      </ul>
-    </aside>
-
-    <main>
-      <header>
-        <div class="header-container">
-          <button type="button" class="open-sidebar" onclick="toggleSidebar()">
-            <i class="ph ph-list"></i>
-          </button>
-
-          <h2>Setting</h2>
+    <div class="form-popup" id="formPopup">
+        <div class="form-popup__content">
+            <form class="form-popup__form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" class="form-popup__input" required>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" class="form-popup__input" required>
+                <button type="submit" class="form-popup__submit">Отправить</button>
+                <button type="button" class="form-popup__close" onclick="closeFormPopup()">Закрыть</button>
+            </form>
         </div>
+    </div>
 
-        <div class="info">
-          <div class="input-icon">
-            <i class="ph ph-magnifying-glass"></i>
-
-            <input
-              type="search"
-              name="search"
-              id="search"
-              placeholder="Search for something"
-              required
-            />
-          </div>
-
-          <button type="button" class="button-icon settings">
-            <i class="ph ph-gear"></i>
-          </button>
-
-          <button type="button" class="button-icon notifications">
-            <i class="ph ph-bell"></i>
-          </button>
-
-          <img
-            src="./assets/icons/pexels-christina-morillo-1181690 1.png"
-            alt="christina_avatar"
-            class="avatar"
-          />
+    <!-- Попап для видео -->
+    <div class="video-popup" id="videoPopup">
+        <div class="video-popup__content">
+            <iframe class="video-popup__iframe" src="" allow="autoplay" allowfullscreen></iframe>
+            <button class="video-popup__close" onclick="closeVideoPopup()">Закрыть</button>
         </div>
-      </header>
-
-      <div class="container">
-        <div class="tabs">
-          <div class="tab active" id="tab-edit-profile">
-            <span>Edit Profile</span>
-          </div>
-
-          <div class="tab" id="tab-preferences">
-            <span>Preferences</span>
-          </div>
-
-          <div class="tab" id="tab-security">
-            <span>Security</span>
-          </div>
-        </div>
-
-        <form class="edit-profile" id="form-edit-profile">
-          <div class="avatar-profile-container">
-            <img
-              class="avatar"
-              src="./assets/icons/Mask Group.png"
-              alt="Avatar Profile"
-            />
-
-            <button type="button" class="edit-avatar-profile">
-              <i class="ph-fill ph-pencil-simple"></i>
-            </button>
-          </div>
-
-          <div class="profile-data-container">
-            <div class="inputs-wrapper">
-              <div class="input-wrapper">
-                <label for="your-name">Your Name</label>
-
-                <input
-                  type="text"
-                  name="your-name"
-                  id="your-name"
-                  placeholder="Charlene Reed"
-                  required
-                />
-              </div>
-
-              <div class="input-wrapper">
-                <label for="username">Username</label>
-
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  placeholder="Charlene Reed"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="inputs-wrapper">
-              <div class="input-wrapper">
-                <label for="email">Email</label>
-
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="charlenereed@gmail.com"
-                  required
-                />
-              </div>
-
-              <div class="input-wrapper">
-                <label for="password">Password</label>
-
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="********"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="inputs-wrapper">
-              <div class="input-wrapper">
-                <label for="date-of-birth">Date of Birth</label>
-
-                <input
-                  type="text"
-                  name="date-of-birth"
-                  id="date-of-birth"
-                  placeholder="25 January 1990"
-                  required
-                />
-              </div>
-
-              <div class="input-wrapper">
-                <label for="present-address">Present Address</label>
-
-                <input
-                  type="text"
-                  name="present-address"
-                  id="present-address"
-                  placeholder="San Jose,  California, USA"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="inputs-wrapper">
-              <div class="input-wrapper">
-                <label for="permanent-address">Permanent Address</label>
-
-                <input
-                  type="text"
-                  name="permanent-address"
-                  id="permanent-address"
-                  placeholder="San Jose, California, USA"
-                  required
-                />
-              </div>
-
-              <div class="input-wrapper">
-                <label for="postal-code">Postal Code</label>
-
-                <input
-                  type="text"
-                  name="postal-code"
-                  id="postal-code"
-                  placeholder="45962"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="inputs-wrapper">
-              <div class="input-wrapper">
-                <label for="country">Country</label>
-
-                <input
-                  type="text"
-                  name="country"
-                  id="country"
-                  placeholder="USA"
-                  required
-                />
-              </div>
-
-              <div class="input-wrapper">
-                <label for="city">City</label>
-
-                <input
-                  type="text"
-                  name="city"
-                  id="city"
-                  placeholder="San Jose"
-                  required
-                />
-              </div>
-            </div>
-
-            <button type="submit" class="save-profile">Save</button>
-          </div>
-        </form>
-
-        <form class="preferences" id="form-preferences">
-          <div class="inputs-wrapper">
-            <div class="input-wrapper">
-              <label for="currency">Currency</label>
-
-              <input
-                type="text"
-                name="currency"
-                id="currency"
-                placeholder="USD"
-                required
-              />
-            </div>
-
-            <div class="input-wrapper">
-              <label for="timezone">Timezone</label>
-
-              <input
-                type="text"
-                name="timezone"
-                id="timezone"
-                placeholder="(GMT-12:00) International Date Line West"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="switches-wrapper">
-            <h4>Notification</h4>
-
-            <div class="switch-wrapper">
-              <label class="switch">
-                <input type="checkbox" checked />
-
-                <span class="slider round"></span>
-              </label>
-
-              <span>I send or receive digital currency</span>
-            </div>
-
-            <div class="switch-wrapper">
-              <label class="switch">
-                <input type="checkbox" />
-
-                <span class="slider round"></span>
-              </label>
-
-              <span>I receive merchant order</span>
-            </div>
-
-            <div class="switch-wrapper">
-              <label class="switch">
-                <input type="checkbox" checked />
-
-                <span class="slider round"></span>
-              </label>
-
-              <span>There are recommendation for my account</span>
-            </div>
-          </div>
-
-          <button type="submit" class="save-preferences">Save</button>
-        </form>
-
-        <form class="security" id="form-security">
-          <div class="switches-wrapper">
-            <h4>Two-factor Authentication</h4>
-
-            <div class="switch-wrapper">
-              <label class="switch">
-                <input type="checkbox" checked />
-
-                <span class="slider round"></span>
-              </label>
-
-              <span>Enable or disable two factor authentication</span>
-            </div>
-          </div>
-
-          <div class="input-container">
-            <h4>Change Password</h4>
-
-            <div class="inputs-wrapper">
-              <div class="input-wrapper">
-                <label for="current-password">Current Password</label>
-
-                <input
-                  type="password"
-                  name="current-password"
-                  id="current-password"
-                  placeholder="********"
-                  required
-                />
-              </div>
-
-              <div class="input-wrapper">
-                <label for="new-password">New Password</label>
-
-                <input
-                  type="password"
-                  name="new-password"
-                  id="new-password"
-                  placeholder="********"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-          <button type="submit" class="save-security">Save</button>
-        </form>
-      </div>
-    </main>
-  </body>
-
-  //векторные иконки
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  // графики 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <script>
-  
-    const sidebar = document.querySelector("aside");
-    const container = document.querySelector("main");
-
-    function toggleSidebar() {
-      sidebar.style.display = "block";
-      sidebar.style.marginLeft = "0";
-      sidebar.style.animationName = "showSidebar";
-      sidebar.style.zIndex = "1";
-
-      container.style.filter = "blur(2px)";
-    }
-
-    function closeSidebar() {
-      sidebar.style.marginLeft = "-100vw";
-      sidebar.style.animationName = "";
-      sidebar.style.zIndex = "0";
-
-      container.style.filter = "";
-    }
-
-    window.addEventListener("resize", function (event) {
-      if (window.innerWidth > 1024) {
-        sidebar.style.marginLeft = "0";
-        sidebar.style.animationName = "";
-        sidebar.style.zIndex = "0";
-
-        container.style.filter = "";
-      }
-    });
-  </script>
+    </div>
+	 </main>
+<!-- TEST -->
+ 
+    <script src="/script.js"></script>
+</body>
 </html>
