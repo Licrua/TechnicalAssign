@@ -1,17 +1,7 @@
 
-// @media (max-height: 1024px) {
-// 	.card--popcorn, .card--icecream {
-// 	  .card__content {
-// 		  min-height: 40%;
-// 	  }
-// 	  .card__details {
-// 		  min-height: 60%;
-// 	  }
-// 	}
-//   }
   @media (min-width: 770px) and (max-width: 1350px) {
 	.banner {
-		height: 50%
+		height: 60%
 	}
 	.banner img {
 		height: 80%;
@@ -52,23 +42,31 @@
 	.card__container {
 		flex-wrap: wrap;
 		padding: 2rem;
-		// height: 50%;
 	}
+
 	.card--pea {
 		order: -3;
 		flex: 0 1 50%;
 	}
 		.card--popcorn {
 			order: -2;
-			// .card__daily, .card__sale {
-			// 	display: none;
-			// }
+		
+			.card__sale {
+				display: none;
+			}
+			.card__status {
+				display: block;
+			}
 			.card__hidden {
-				display: flex;
+				display: inline;
 				background-color: #AC59F1;
-			color: #fff;
-			padding: 0.4rem;
-			border-radius: 50px;
+				color: #fff;
+				padding: 0.4rem;
+				border-radius: 50px;
+			}
+			.card__daily {
+				display: none;
+				// background-color: #AC59F1;
 			}
 		}
 		.card--icecream  {
@@ -82,23 +80,21 @@
 	display: flex;
 	position: absolute;
 	bottom: 0;
-	gap: 10px; /* Расстояние между кнопками */
+	gap: 10px; 
 	justify-content: center;
 	align-items: center;
   }
 
 
-  /* Скрываем оригинальные радио-кнопки */
   .card__slider-input {
 	display: none;
   }
   
-  /* Стили для кастомной кнопки */
   .card__slider-button {
-	width: 16px; /* Диаметр кнопки */
-	height: 16px;
-	background-color: #d3d3d3; /* Серый цвет для неактивного состояния */
-	border-radius: 50%; /* Круглая форма */
+	width: 1rem; 
+	height: 1rem;
+	background-color: #d3d3d3; 
+	border-radius: 50%; 
 	cursor: pointer;
 	transition: background-color 0.3s;
   }
@@ -129,14 +125,14 @@
   
   /* Активное состояние */
   #slide1:checked + .card__slider-button,   #slide2:checked + .card__slider-button  {
-	background-color: #333; /* Черный цвет для активного состояния */
+	background-color: #333;
   }
   
 
 
 
 	.banner {
-		height: 40%;
+		height: 30%;
 		padding: 1rem;
 	}
 	
@@ -192,7 +188,6 @@
 		.card__badge-wrapper {
 			display: flex;
 			flex-direction: column;
-			// width: 20vw;
 
 		}
 	}
@@ -207,14 +202,14 @@
 
 	.card--popcorn {
 		order: 3;
-		flex-basis: 30%;
-		height: 60vh;
+		flex-basis: 45%;
+		height: 50vh;
 		flex-grow: 1;
 	}
 	.card--icecream {
-		flex-basis: 30%;
+		flex-basis: 45%;
 		flex-grow: 1;
-		height: 60vh;
+		height: 50vh;
 		order: 4;
 	}
 	.card {
@@ -235,7 +230,7 @@
 	}
 
 }
-// }
+
 // @media  (min-width: 320px) and (max-width: 767px) {
 // 	.card--popcorn, .card--icecream {
 // 	 flex-basis: 45%;

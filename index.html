@@ -17,8 +17,8 @@
         <img src="./assets/icons/конфеты.jpeg" alt="Баннер" class="banner__image">
         <button class="banner__button">Смотреть видео</button>
 		<div class="banner__video">
-			<iframe width="80%"  src="https://www.youtube.com/embed/Zhq_ThHG2gA?si=cQG1-Ohu1_aWZFU1?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		</div>
+			<iframe width="80%" src="https://www.youtube.com/embed/Zhq_ThHG2gA?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>		
     </section>
 	
 	 <main class="card__container">
@@ -87,6 +87,7 @@
 			<div class="card__content">
 				<div class="card__badge-wrapper">
 					<p class="card__daily">Товар дня</p>
+					<p class="card__hidden">Хит</p>
 					<div class="card__sale">- 29%</div>
 				</div>
 				<div class="card__actions">
@@ -123,7 +124,7 @@
 				<div class="card-form">
 					<button class="card-form__close">&times;</button>
 					<h2 class="card-form__title">Оставьте заявку</h2>
-					<form class="card-form__form" id="cardForm">
+					<form autocomplete="on" class="card-form__form" id="cardForm">
 						<div class="card-form__group">
 							<input type="text" class="card-form__input" id="name" name="name" placeholder="Ваше имя *" required>
 							<span class="card-form__error-message">Поле не заполнено</span>
@@ -143,14 +144,6 @@
 					</form>
 				</div>
 			</div>
-			
-
-    <!-- Попап для видео -->
-    <div class="video-popup" id="videoPopup">
-        <div class="video-popup__content">
-            <iframe class="video-popup__iframe" src="" allow="autoplay" allowfullscreen></iframe>
-            <button class="video-popup__close">Закрыть</button>
-        </div>
     </div>
 	 </main>
     <script src="/script.js"></script>
