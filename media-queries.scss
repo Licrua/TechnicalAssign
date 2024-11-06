@@ -1,3 +1,4 @@
+@import '_generals';
 
   @media (min-width: 770px) and (max-width: 1350px) {
 	.banner {
@@ -10,7 +11,7 @@
   
   @media (min-width: 1024px) and (max-width: 1350px) {
 	.card__container {
-		padding: 3rem;
+		padding: $padding-extra-large;
 	}
 	.card--dove, .card--carrot {
 		width: 100%;
@@ -36,12 +37,12 @@
 	}
 
 	.card__dove {
-		padding: 2rem;
+		padding: $padding-extra;
 	}
 
 	.card__container {
 		flex-wrap: wrap;
-		padding: 2rem;
+		padding: $padding-extra;
 	}
 
 	.card--pea {
@@ -66,7 +67,6 @@
 			}
 			.card__daily {
 				display: none;
-				// background-color: #AC59F1;
 			}
 		}
 		.card--icecream  {
@@ -80,7 +80,7 @@
 	display: flex;
 	position: absolute;
 	bottom: 0;
-	gap: 10px; 
+	gap: $padding-small; 
 	justify-content: center;
 	align-items: center;
   }
@@ -91,8 +91,8 @@
   }
   
   .card__slider-button {
-	width: 1rem; 
-	height: 1rem;
+	width: $padding-large; 
+	height: $padding-large;
 	background-color: #d3d3d3; 
 	border-radius: 50%; 
 	cursor: pointer;
@@ -133,7 +133,7 @@
 
 	.banner {
 		height: 30%;
-		padding: 1rem;
+		padding: $padding-large;
 	}
 	
 	.card__container {
@@ -142,7 +142,7 @@
 		position: relative;
 		justify-content: center;
 		flex-wrap: wrap;
-		padding: 2rem;
+		padding: $padding-extra;
 	}
 	.banner__image  {
 		margin: 1rem;
@@ -231,22 +231,6 @@
 
 }
 
-// @media  (min-width: 320px) and (max-width: 767px) {
-// 	.card--popcorn, .card--icecream {
-// 	 flex-basis: 45%;
-// 	 flex-grow: 1;
-// 	.card__button {
-// 		width: unset;
-// 	}
-// 	.card__container {
-// 		background-color: red;
-// 	}
-// 	.card-form__group:last-child {
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 	}
-// 	}
-// }
 
 @media (max-width: 1180px) {
 	.card-form {

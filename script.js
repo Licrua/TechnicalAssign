@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.querySelector('.card-form__close');
     const cardContainer = document.querySelector('.card__container');
 
-// видео
+// видео переменные
 	const playButton = document.querySelector('.banner__button');
 	const videoPlayer = document.querySelector('.banner__video');
 
